@@ -1,0 +1,237 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+/* Global styles */
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: black;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero {
+  height: calc(
+    100vh
+  ); /* Subtracting the height of the footer from the viewport height */
+  width: 100%;
+  background-image: url("./assets/max_shirko_None_b20aa929-95e1-4cff-81b4-8d0306ac0b3e-2\ 1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nav-hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px white solid;
+  max-width: 100%;
+  transform: translateY(20%);
+  margin: 0 20px;
+}
+
+.nav-hero-mobile {
+  display: none;
+  border: 1px white solid;
+  max-width: 100%;
+  transform: translateY(20%);
+  margin: 0 20px;
+  color: white;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  background-color: black;
+}
+
+.nav-hero-mobile a {
+  text-decoration: none;
+  color: white;
+}
+
+.first-grid-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 50px;
+  color: white;
+  align-items: center;
+}
+
+.second-grid-nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-container-one-nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 0.25fr;
+  border: 1px white solid;
+  border-top: none;
+  color: white;
+  text-align: center;
+}
+
+.item-container-one-nav div {
+  border: 1px white solid;
+  padding: 20px;
+  border-bottom: none;
+}
+
+.item-container-two-nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1.5fr;
+  border: 1px white solid;
+  color: white;
+  text-align: center;
+  border-bottom: none;
+}
+
+.item-container-two-nav div {
+  border: 1px white solid;
+  padding: 20px;
+  border-bottom: none;
+  border-top: none;
+}
+
+/* Hero Content */
+
+.hero-content {
+  display: grid;
+  color: white;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  height: calc(
+    100% - 100px
+  ); /* Subtracting the height of the footer from the remaining height of the hero section */
+}
+
+.hero-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.hero-content-left h1:nth-child(2) {
+  font-size: clamp(3rem, 8vw, 6rem);
+  background: linear-gradient(to right, #c6f1f7, #f983e9, #b877ff, #c2e9cd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-content-left h1:nth-child(1) {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+/* Hero Content */
+
+.hero-footer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  height: 100px;
+  align-items: center;
+  backdrop-filter: blur(20px);
+}
+
+.hero-footer div {
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  .nav-hero {
+    display: none;
+  }
+  .nav-hero-mobile {
+    display: block;
+    display: flex;
+  }
+}
+
+#page2 {
+  background-color: #111111;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 50px;
+  padding: 7vw;
+}
+
+.page2-para {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page2-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#page2-section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+#page2-section1 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+}
+
+.style-h1 div {
+  position: relative;
+  background-color: red;
+}
+
+.style-h1 img {
+  position: absolute;
+  left: 0%;
+  width: 20%;
+}
+
+.style-h1 h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  background: linear-gradient(to right, #c6f1f7, #f983e9, #b877ff, #c2e9cd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.style-h1 h1:nth-child(2)::after {
+  display: block;
+  content: "‎";
+  background-image: url(../assets/line.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
